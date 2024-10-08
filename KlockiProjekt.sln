@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KlockiProjekt.Android", "KlockiProjekt\KlockiProjekt.Android\KlockiProjekt.Android.csproj", "{3B907F27-2F29-4F28-A626-B07D217C606A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KlockiProjekt", "KlockiProjekt\KlockiProjekt\KlockiProjekt.csproj", "{B5636984-ED70-4D3A-A043-CB0B48789788}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B907F27-2F29-4F28-A626-B07D217C606A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B907F27-2F29-4F28-A626-B07D217C606A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B907F27-2F29-4F28-A626-B07D217C606A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3B907F27-2F29-4F28-A626-B07D217C606A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B907F27-2F29-4F28-A626-B07D217C606A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B907F27-2F29-4F28-A626-B07D217C606A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B5636984-ED70-4D3A-A043-CB0B48789788}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5636984-ED70-4D3A-A043-CB0B48789788}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5636984-ED70-4D3A-A043-CB0B48789788}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B5636984-ED70-4D3A-A043-CB0B48789788}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5636984-ED70-4D3A-A043-CB0B48789788}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5636984-ED70-4D3A-A043-CB0B48789788}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5EF89783-F240-4B88-BB2E-3DDF5C5E2FC4}
+	EndGlobalSection
+EndGlobal

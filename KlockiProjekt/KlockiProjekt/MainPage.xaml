@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:forms="clr-namespace:Particle.Forms;assembly=Particle.Forms"
+             x:Class="KlockiProjekt.MainPage">
+    <ContentPage.Resources>
+        <x:Array Type="{x:Type Color}" x:Key="ConfettiColors">
+            <Color>#a864fd</Color>
+            <Color>#29cdff</Color>
+            <Color>#78ff44</Color>
+            <Color>#ff718d</Color>
+            <Color>#fdff6a</Color>
+            <Color>#ffcbf2</Color>
+        </x:Array>
+    </ContentPage.Resources>
+    <StackLayout Padding="6, 100, 6, 6" BackgroundColor="#2e2e2e">
+        <Button Text="RESET KSZTAŁTÓW" Clicked="Button_Clicked"/>
+
+        <Grid x:Name="GameBoardGrid"
+              Padding="10"
+              BackgroundColor="#696969"
+              ColumnSpacing="3"
+              RowSpacing="3"
+              HorizontalOptions="Center">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40" />
+                <ColumnDefinition Width="40" />
+                <ColumnDefinition Width="40" />
+                <ColumnDefinition Width="40" />
+                <ColumnDefinition Width="40" />
+                <ColumnDefinition Width="40" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+        <forms:ParticleView x:Name="MyParticleCanvas" Padding="20, 0" IsVisible="False" IsActive="True" IsRunning="False" HasFallingParticles="True" FallingParticlesPerSecond="60"
+                            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ParticleColors="{StaticResource ConfettiColors}"/>
+
+        <ScrollView Orientation="Horizontal" HorizontalOptions="Center" HorizontalScrollBarVisibility="Always" Margin="3">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" x:Name="shapesPanel">
+                <Grid ColumnSpacing="3" RowSpacing="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="40"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.GestureRecognizers>
+                        <DragGestureRecognizer CanDrag="True" DragStarting="DragGestureRecognizer_DragStarting"/>
+                    </Grid.GestureRecognizers>
+
+                    <BoxView Color="Bisque" Grid.Row="0" Grid.Column="0"/>
+                    <BoxView Color="Bisque" Grid.Row="0" Grid.Column="1"/>
+                    <BoxView Color="Bisque" Grid.Row="0" Grid.Column="2"/>
+                </Grid>
+
+                <Grid ColumnSpacing="3" RowSpacing="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="40"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.GestureRecognizers>
+                        <DragGestureRecognizer CanDrag="True" DragStarting="DragGestureRecognizer_DragStarting"/>
+                    </Grid.GestureRecognizers>
+                    <BoxView Color="Violet" Grid.Row="0" Grid.Column="0"/>
+                    <BoxView Color="Violet" Grid.Row="1" Grid.Column="0"/>
+                    <BoxView Color="Violet" Grid.Row="2" Grid.Column="0"/>
+                    <BoxView Color="Violet" Grid.Row="3" Grid.Column="0"/>
+                    <BoxView Color="Violet" Grid.Row="3" Grid.Column="1"/>
+                </Grid>
+
+                <Grid ColumnSpacing="3" RowSpacing="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="40"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.GestureRecognizers>
+                        <DragGestureRecognizer CanDrag="True" DragStarting="DragGestureRecognizer_DragStarting"/>
+                    </Grid.GestureRecognizers>
+                    <BoxView Color="Green" Grid.Row="0" Grid.Column="0"/>
+                    <BoxView Color="Green" Grid.Row="1" Grid.Column="0"/>
+                    <BoxView Color="Green" Grid.Row="0" Grid.Column="1"/>
+                    <BoxView Color="Green" Grid.Row="1" Grid.Column="1"/>
+                </Grid>
+
+                <Grid ColumnSpacing="3" RowSpacing="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="40"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.GestureRecognizers>
+                        <DragGestureRecognizer CanDrag="True" DragStarting="DragGestureRecognizer_DragStarting"/>
+                    </Grid.GestureRecognizers>
+                    <BoxView Color="Brown" Grid.Row="0" Grid.Column="0"/>
+                    <BoxView Color="Brown" Grid.Row="0" Grid.Column="1"/>
+                    <BoxView Color="Brown" Grid.Row="0" Grid.Column="2"/>
+                    <BoxView Color="Brown" Grid.Row="1" Grid.Column="1"/>
+                </Grid>
+
+                <Grid ColumnSpacing="3" RowSpacing="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="40"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.GestureRecognizers>
+                        <DragGestureRecognizer CanDrag="True" DragStarting="DragGestureRecognizer_DragStarting"/>
+                    </Grid.GestureRecognizers>
+                    <BoxView Color="LightSeaGreen" Grid.Row="0" Grid.Column="0"/>
+                    <BoxView Color="LightSeaGreen" Grid.Row="1" Grid.Column="0"/>
+                    <BoxView Color="LightSeaGreen" Grid.Row="0" Grid.Column="1"/>
+                    <BoxView Color="LightSeaGreen" Grid.Row="1" Grid.Column="1"/>
+                </Grid>
+
+                <Grid ColumnSpacing="3" RowSpacing="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="40"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.GestureRecognizers>
+                        <DragGestureRecognizer CanDrag="True" DragStarting="DragGestureRecognizer_DragStarting"/>
+                    </Grid.GestureRecognizers>
+                    <BoxView Color="Orange" Grid.Row="0" Grid.Column="1"/>
+                    <BoxView Color="Orange" Grid.Row="1" Grid.Column="1"/>
+                    <BoxView Color="Orange" Grid.Row="2" Grid.Column="0"/>
+                    <BoxView Color="Orange" Grid.Row="2" Grid.Column="1"/>
+                </Grid>
+
+                <Grid ColumnSpacing="3" RowSpacing="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="40"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.GestureRecognizers>
+                        <DragGestureRecognizer CanDrag="True" DragStarting="DragGestureRecognizer_DragStarting"/>
+                    </Grid.GestureRecognizers>
+                    <BoxView Color="Indigo" Grid.Row="0" Grid.Column="0"/>
+                    <BoxView Color="Indigo" Grid.Row="1" Grid.Column="0"/>
+                    <BoxView Color="Indigo" Grid.Row="0" Grid.Column="1"/>
+                    <BoxView Color="Indigo" Grid.Row="1" Grid.Column="1"/>
+                </Grid>
+
+                <Grid ColumnSpacing="3" RowSpacing="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="40"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.GestureRecognizers>
+                        <DragGestureRecognizer CanDrag="True" DragStarting="DragGestureRecognizer_DragStarting"/>
+                    </Grid.GestureRecognizers>
+                    <BoxView Color="GreenYellow" Grid.Row="0" Grid.Column="0"/>
+                    <BoxView Color="GreenYellow" Grid.Row="0" Grid.Column="1"/>
+                    <BoxView Color="GreenYellow" Grid.Row="0" Grid.Column="2"/>
+                    <BoxView Color="GreenYellow" Grid.Row="1" Grid.Column="1"/>
+                    <BoxView Color="GreenYellow" Grid.Row="2" Grid.Column="1"/>
+                </Grid>
+
+                <Grid ColumnSpacing="3" RowSpacing="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="40"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.GestureRecognizers>
+                        <DragGestureRecognizer CanDrag="True" DragStarting="DragGestureRecognizer_DragStarting"/>
+                    </Grid.GestureRecognizers>
+                    <BoxView Color="Yellow" Grid.Row="0" Grid.Column="0"/>
+                    <BoxView Color="Yellow" Grid.Row="0" Grid.Column="1"/>
+                    <BoxView Color="Yellow" Grid.Row="0" Grid.Column="2"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+
+</ContentPage>
